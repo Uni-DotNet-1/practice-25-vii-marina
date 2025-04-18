@@ -16,56 +16,52 @@ namespace Practics_8
     {
         public IEnumerable<int> GetEvenNumbers(List<int> numbers)
         {
-            return ;
+            return numbers.Where(n => n % 2 == 0);
         }
 
         public int GetSum(List<int> numbers)
         {
-            return ;
+            return numbers.Sum();
         }
 
         public IEnumerable<string> GetLongStrings(List<string> strings)
         {
-            return ;
+            return strings.Where(s => s.Length > 3);
         }
-
 
         public Person FindPersonByName(List<Person> people, string name)
         {
-            return ;
+            return people.First(p => p.Name == name);
         }
 
         public IEnumerable<int> SortDescending(List<int> numbers)
         {
-            return ;
+            return numbers.OrderByDescending(n => n);
         }
 
         public IEnumerable<IGrouping<int, Person>> GroupByAge(List<Person> people)
         {
-            return ;
+            return people.GroupBy(p => p.Age);
         }
 
         public bool AnyNumberGreaterThanTen(List<int> numbers)
         {
-            return ;
+            return numbers.Any(n => n > 10);
         }
 
         public IEnumerable<string?> SelectNames(List<Person> people)
         {
-            return ;
+            return people.Select(p => p.Name);
         }
 
         public bool AllPositive(List<int> numbers)
         {
-            return ;
+            return numbers.All(n => n > 0);
         }
 
         public IEnumerable<int> ConcatenateLists(List<int> list1, List<int> list2)
         {
-            return ;
+            return list1.Concat(list2);
         }
-
-
     }
-
 }
